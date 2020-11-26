@@ -7,4 +7,6 @@ RUN apk update --no-cache upgrade && \
 
 COPY docker-entrypoint.sh /
 
+VOLUME [ "/etc/bind", "/var/bind" ]
+
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
